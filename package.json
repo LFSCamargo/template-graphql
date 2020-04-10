@@ -6,9 +6,21 @@
   "author": "LFSCamargo",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "clear": "rimraf build/",
+    "start": "yarn clear && webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "apollo-server",
+    "apollo",
+    "koa",
+    "graphql",
+    "typescript"
+  ],
   "dependencies": {
     "apollo-server-koa": "^2.12.0",
     "bcrypt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "graphql": "^15.0.0",
     "jsonwebtoken": "^8.5.1",
@@ -20,6 +32,8 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/graphql": "^14.5.0",
     "@types/jest": "^25.2.1",
     "@types/jsonwebtoken": "^8.3.9",
     "@types/koa": "^2.11.3",
@@ -28,13 +42,8 @@
     "@types/lodash": "^4.14.149",
     "@types/mongoose": "^5.7.10",
     "@typescript-eslint/parser": "^2.27.0",
+    "auto-reload-webpack-plugin": "^1.1.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-typescript": "^0.14.0",
-    "jest": "^25.3.0",
-    "prettier": "^2.0.4",
-    "ts-jest": "^25.3.1",
-    "typescript": "^3.8.3",
-    "typescript-eslint": "^0.0.1-alpha.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-airbnb-typescript": "^7.2.0",
     "eslint-config-prettier": "^6.10.1",
@@ -45,6 +54,23 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-promise": "^4.2.1"
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-typescript": "^0.14.0",
+    "jest": "^25.3.0",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.3.1",
+    "ts-loader": "^6.2.2",
+    "ts-node": "^8.8.2",
+    "tsconfig-paths": "^3.9.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.8.3",
+    "typescript-eslint": "^0.0.1-alpha.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-merge": "^4.2.1",
+    "webpack-node-externals": "^1.7.2"
   }
 }
