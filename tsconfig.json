@@ -4,7 +4,6 @@
     "module": "commonjs",
     "allowJs": true,
     "resolveJsonModule": true,
-    "noEmit": true,
     "skipLibCheck": true,
     "strict": true,
     "noImplicitAny": true,
@@ -24,6 +23,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "paths": {
+      "@types": ["src/@types"],
       "~/modules": ["src/modules"],
       "~/utils": ["src/utils"],
       "~/graphql": ["src/graphql"],
@@ -31,8 +31,5 @@
     }
   },
   "include": ["**/*"],
-  "exclude": [
-    "node_modules",
-    "__tests__/" // exclude test files
-  ]
+  "exclude": ["node_modules", "__tests__/"]
 }
