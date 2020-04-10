@@ -1,0 +1,18 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+  mongo: circleci/mongo:latest
+jobs:
+  validations:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: yarn install
+            - run: yarn build
+workflows:
+  validations:
+    jobs:
+      - validations
