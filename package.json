@@ -1,7 +1,7 @@
 {
-  "name": "remindme-graphql-server",
+  "name": "template-graphql",
   "version": "1.0.0",
-  "description": "A simple graphql server made for the remind me application",
+  "description": "A GraphQL Template Using Koa and Apollo Server",
   "main": "src/index.ts",
   "author": "LFSCamargo",
   "license": "MIT",
