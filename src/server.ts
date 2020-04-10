@@ -2,7 +2,7 @@ import koa from "koa";
 import mongoose from "mongoose";
 import { ApolloServer, PubSub } from "apollo-server-koa";
 import graphql from "~/graphql";
-import { MONGO_URL, PORT } from "./config";
+import { MONGO_URL, PORT } from "~/config";
 import { getUser } from "~/utils";
 
 const app = new koa();
