@@ -18,3 +18,8 @@ export interface GraphQLContext {
   user: User | null;
   pubsub: PubSub;
 }
+
+export interface PageInfo {
+  count: number;
+  hasNextPage: boolean;
+}
