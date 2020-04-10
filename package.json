@@ -8,7 +8,10 @@
   "private": true,
   "scripts": {
     "clear": "rimraf build/",
-    "start": "yarn clear && webpack --config webpack.config.js"
+    "dev": "yarn clear && webpack --config webpack.development.js",
+    "build": "yarn clear && webpack --config webpack.production.js",
+    "prestart": "yarn build",
+    "start": "node build/server.js"
   },
   "keywords": [
     "apollo-server",
