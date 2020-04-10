@@ -6,3 +6,4 @@ export const JWT = process.env.JWT || "topsecret";
 export const PORT = process.env.PORT || 5000;
 export const MONGO_URL =
   process.env.MONGO_URL || "mongodb://localhost/remindme";
+export const ENV = process.env.ENV || "DEV";

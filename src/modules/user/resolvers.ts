@@ -15,9 +15,7 @@ export default {
         throw Error(Constants.errors.notLogged);
       }
 
-      return {
-        user: await User.findOne({ _id: user._id }),
-      };
+      return user;
     },
   },
   Mutation: {

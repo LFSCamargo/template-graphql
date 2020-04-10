@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { ApolloServer, PubSub } from "apollo-server-koa";
 import graphql from "~/graphql";
 import { MONGO_URL, PORT } from "~/config";
-import { getUser } from "~/utils";
+import { getUser, logRequest } from "~/utils";
 
 const app = new koa();
 const pubsub = new PubSub();
@@ -11,10 +11,17 @@ const pubsub = new PubSub();
 const server = new ApolloServer({
   typeDefs: graphql.types,
   resolvers: graphql.resolvers,
-  context: async ({ req }) => {
-    const token = req.headers.authorization ? req.headers.authorization : "";
+  context: async ({ ctx }) => {
+    const { request } = ctx;
+
+    logRequest(request);
+
+    const token = request.header.authorization
+      ? request.header.authorization
+      : "";
+
     return {
-      user: token !== "" ? await getUser(token) : null,
+      user: await getUser(token),
       pubsub,
     };
   },

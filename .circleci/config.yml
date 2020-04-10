@@ -11,6 +11,8 @@ jobs:
           steps:
             - run: yarn install
             - run: yarn build
+            - run: yarn ts:check
+            - run: yarn eslint:check
 workflows:
   build-and-test:
     jobs:
