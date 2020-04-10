@@ -12,11 +12,13 @@
     "build": "yarn clear && webpack --config webpack.production.js",
     "prestart": "yarn build",
     "start": "node build/server.js",
-    "lint": "tsc && eslint '*/**/*.{js,jsx,ts,tsx}' --fix",
+    "ts:check": "tsc --noEmit .",
+    "eslint:check": "eslint '*/**/*.{js,jsx,ts,tsx}' --fix",
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,jsx,ts,tsx}' --fix",
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.{js,jsx,ts,tsx,json}\""
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{ts,tsx}": [
       "yarn pretty",
       "yarn lint",
       "git add ."
@@ -58,6 +60,7 @@
     "@types/koa-router": "^7.4.0",
     "@types/lodash": "^4.14.149",
     "@types/mongoose": "^5.7.10",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "auto-reload-webpack-plugin": "^1.1.0",
     "eslint": "^6.8.0",
