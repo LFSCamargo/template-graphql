@@ -23,6 +23,8 @@ module.exports = {
     __DEV__: true,
   },
   rules: {
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-unused-vars": 0,
     "@typescript-eslint/member-delimiter-style": 0,
     "@typescript-eslint/no-empty-function": 0,
     "@typescript-eslint/no-explicit-any": 0,
@@ -36,7 +38,7 @@ module.exports = {
     "no-duplicate-imports": "error",
     "consistent-return": 0,
     "array-callback-return": 0,
-    "promise/prefer-await-to-callbacks": "error",
+    "promise/prefer-await-to-callbacks": 0,
     "promise/prefer-await-to-then": "error",
   },
 };
