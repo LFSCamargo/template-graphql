@@ -31,7 +31,7 @@ mongoose.connect(MONGO_URL, {}, (err) => {
 
   app.listen({ port: PORT }, () =>
     console.log(
-      `🚀 GraphQL Server ready at http://localhost:4000${server.graphqlPath}`
+      `🚀 server ready at http://localhost:${PORT}/${server.graphqlPath}`
     )
   );
 });
