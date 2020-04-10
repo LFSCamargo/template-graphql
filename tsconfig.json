@@ -31,5 +31,5 @@
     }
   },
   "include": ["**/*"],
-  "exclude": ["node_modules", "__tests__/"]
+  "exclude": ["node_modules", "__tests__/", "build/", "webpack.config.js"]
 }
