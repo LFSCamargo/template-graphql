@@ -14,6 +14,7 @@
     "start": "node build/server.js",
     "eslint:check": "eslint '*/**/*.{js,jsx,ts,tsx}' --fix",
     "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --fix",
+    "typescript:check": "tsc",
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.{js,jsx,ts,tsx,json}\""
   },
   "lint-staged": {

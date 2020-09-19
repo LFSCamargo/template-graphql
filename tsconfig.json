@@ -6,6 +6,8 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
+    "noEmit": true,
+    "declaration": false,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
@@ -31,5 +33,5 @@
     }
   },
   "include": ["**/*"],
-  "exclude": ["node_modules", "__tests__/", "build/"]
+  "exclude": ["node_modules", "__tests__/", "build/", "webpack.*", ".eslintrc.js"]
 }
