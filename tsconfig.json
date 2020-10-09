@@ -6,7 +6,6 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "noEmit": true,
     "declaration": false,
     "noImplicitAny": true,
     "strictNullChecks": true,
